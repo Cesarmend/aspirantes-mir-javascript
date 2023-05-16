@@ -1,21 +1,24 @@
-let vladimir = {
-    nombre: "Vladimir Putin",
-    edad: 70,
+let Mbappe = {
+    nombre: "Kylian Mbappé",
+    edad: 24,
     activo: true,
-    hobbies: ["war","desctruction","nuclear weapons"],
+    hobbies: ["futbol","Tennis","video games"],
     saluda: function(){
         return "Hola, me llamo " + this.nombre}
 }
 
-console.log(vladimir.edad)
+console.log(Mbappe.edad)
 
-vladimir.estatura= 1.8;
-delete vladimir.activo;
+Mbappe.estatura= 1.8;
+delete Mbappe.activo;
 
-for (let key in vladimir){
+for (let key in Mbappe){
+    if (key=== 'saluda'){
+        continue;
+    }
 
-    console.log(key + ": " + vladimir[key])
+    console.log(key + ": " + Mbappe[key]);
 }
 
-console.log(vladimir.saluda());
+console.log(Mbappe.saluda());
 
